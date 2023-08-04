@@ -1,15 +1,25 @@
 package com.example.oopplayground.model
 
+import androidx.annotation.VisibleForTesting
+import androidx.annotation.VisibleForTesting.Companion.PRIVATE
 import java.math.BigDecimal
 
 class Money(
     amount: BigDecimal,
 ) {
 
-    private val amount: BigDecimal = amount
-    fun wons(amount: Long): Money {
-        return Money(BigDecimal.valueOf(amount))
+    companion object {
+        fun wons(amount: Long): Money {
+            return Money(BigDecimal.valueOf(amount))
+        }
+
+        fun wons(amount: Double): Money {
+            return Money(BigDecimal.valueOf(amount))
+        }
     }
+
+    @VisibleForTesting(otherwise = PRIVATE)
+    val amount: BigDecimal = amount
 
     fun plus(amount: Money): Money {
         return Money(this.amount.add(amount.amount))
