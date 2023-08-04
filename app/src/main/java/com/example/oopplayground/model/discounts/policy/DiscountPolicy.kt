@@ -1,7 +1,8 @@
-package com.example.oopplayground.model.discounts
+package com.example.oopplayground.model.discounts.policy
 
 import com.example.oopplayground.model.Money
 import com.example.oopplayground.model.Screening
+import com.example.oopplayground.model.discounts.DiscountCondition
 import java.math.BigDecimal
 
 abstract class DiscountPolicy(

@@ -1,6 +1,6 @@
 package com.example.oopplayground.model
 
-import com.example.oopplayground.model.discounts.DiscountPolicy
+import com.example.oopplayground.model.discounts.policy.DiscountPolicy
 import java.time.Duration
 
 class Movie(
