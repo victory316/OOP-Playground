@@ -17,4 +17,8 @@ class Screening(
     fun isSequence(sequence: Int) = this.sequence == sequence
 
     fun getMovieFee(): Money = movie.getFee()
+
+    fun calculateFee(audienceCount: Int): Money {
+        return movie.calculateMovieFee(this).times(audienceCount.toDouble())
+    }
 }
